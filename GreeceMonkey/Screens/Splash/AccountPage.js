@@ -3,7 +3,7 @@ import React from 'react'
 
 import AntDesign from 'react-native-vector-icons/AntDesign';
 const {height,width} = Dimensions.get('window');
-export default function AccountPage() {
+export default function AccountPage({navigation}) {
   return (
     <View style={styles.container}>
         <View style={styles.header}>
@@ -14,7 +14,7 @@ export default function AccountPage() {
                 <Text style={{fontSize:36,fontWeight:'500',top:20}}>Select Account</Text>
             </View>
             <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={()=>navigation.navigate("SignIn")}>
                     <Text style={{color:"#ff6a12"}}>User</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button}>
