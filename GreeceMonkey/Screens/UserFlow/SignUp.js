@@ -130,7 +130,6 @@ btn:{
   backgroundColor:'#ff6a12',
   justifyContent:'center',
   alignItems:'center'
-
 },
 icon:{
   justifyContent:'center'
