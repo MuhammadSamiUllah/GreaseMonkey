@@ -15,36 +15,8 @@ const Stack = createNativeStackNavigator();
 const AppNavigator = () =>{
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-            <Stack.Screen 
-                name='enterEmail'
-                component={enterEmail}
-                options={{headerShown:false}}
-                />
-                <Stack.Screen 
-                name='otp'
-                component={otp}
-                options={{headerShown:false}}
-                />
-                  <Stack.Screen 
-                name='verify'
-                component={verify}
-                options={{headerShown:false}}
-                />
-            <Stack.Screen 
-                name='SignIn'
-                component={SignIn}
-                options={{headerShown:false}}
-                />
-                
-
-            <Stack.Screen 
-                name='SignUp'
-                component={SignUp}
-                options={{headerShown:false}}
-                />
-           
-                <Stack.Screen
+            <Stack.Navigator initialRouteName='SplashScreen1'>
+            <Stack.Screen
                 name="SplashScreen1"
                 component={SplashScreen1}
                 options={{headerShown:false}}
@@ -65,6 +37,36 @@ const AppNavigator = () =>{
                 component={AccountPage}
                 options={{headerShown:false}}
                 />
+                 <Stack.Screen 
+                name='SignIn'
+                component={SignIn}
+                options={{headerShown:false}}
+                />
+                
+
+            <Stack.Screen 
+                name='SignUp'
+                component={SignUp}
+                options={{headerShown:false}}
+                />
+            <Stack.Screen 
+                name='enterEmail'
+                component={enterEmail}
+                options={{headerShown:false}}
+                />
+                <Stack.Screen 
+                name='otp'
+                component={otp}
+                options={{headerShown:false}}
+                />
+                  <Stack.Screen 
+                name='verify'
+                component={verify}
+                options={{headerShown:false}}
+                />
+           
+           
+             
                
               
            
