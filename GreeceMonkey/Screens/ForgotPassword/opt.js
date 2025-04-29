@@ -27,7 +27,10 @@ export default function Otp({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate('enterEmail')}>
+          
         <AntDesign name='left' color={'#000000'} size={24} />
+        </TouchableOpacity>
         <Text style={{ fontSize: 29, fontWeight: '500', top: -8 }}>Enter OTP</Text>
       </View>
 

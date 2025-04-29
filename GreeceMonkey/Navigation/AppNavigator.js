@@ -10,6 +10,8 @@ import SignUp from '../Screens/UserFlow/SignUp';
 import enterEmail from '../Screens/ForgotPassword/enterEmail';
 import otp from '../Screens/ForgotPassword/opt';
 import verify from '../Screens/ForgotPassword/verify';
+import newPassword from '../Screens/ForgotPassword/newPassword';
+import passwordUpdate from '../Screens/ForgotPassword/passwordUpdate';
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () =>{
@@ -62,6 +64,16 @@ const AppNavigator = () =>{
                   <Stack.Screen 
                 name='verify'
                 component={verify}
+                options={{headerShown:false}}
+                />
+                  <Stack.Screen 
+                name='newPassword'
+                component={newPassword}
+                options={{headerShown:false}}
+                />
+                  <Stack.Screen 
+                name='passwordUpdate'
+                component={passwordUpdate}
                 options={{headerShown:false}}
                 />
            

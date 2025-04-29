@@ -1,7 +1,7 @@
 import { View, Text,StyleSheet,Dimensions,Image,TouchableOpacity } from 'react-native'
 import React from 'react'
 const {height,width} = Dimensions.get('window');
-export default function verify() {
+export default function verify({navigation}) {
   return (
     <View style={styles.container}>
       <View style={{alignItems:'center',justifyContent:'center',top:100,gap:30}}>
@@ -11,7 +11,7 @@ export default function verify() {
           <Text style={{fontSize:18,color:'#6b7474',textAlign:'center'}}>Your OTP has been verified {'\n'} successfully. {'\n'}
             Please set your new password now. 
           </Text>
-<TouchableOpacity style={styles.btn}>
+<TouchableOpacity style={styles.btn} onPress={()=>{navigation.navigate('newPassword')}}>
           <Text style={{fontSize:18,color:'#ffffff'}}>Continue</Text>
         </TouchableOpacity>
         </View>

@@ -6,7 +6,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import { TouchableOpacity } from 'react-native';
 export default function SignIn({navigation}) {
   const [password,setPassword] = useState('');
-  const [secure,setSecure] = useState(true);
+  const [secureForPassword,setSecureForPassword] = useState(true);
   const [toggleCheckBox, setToggleCheckBox] = useState(false)
 return (
   <View style={styles.container}>
@@ -18,12 +18,14 @@ return (
 
           <TextInput placeholder='E mail'  style={styles.input}/>
           <View style={styles.passwordContainer}>
-          <TextInput placeholder='Password'  style={styles.passwordinput} secureTextEntry={secure} value={password} onChangeText={setPassword} />
-          <TouchableOpacity onPress={() => setSecure(!secure)} style={styles.icon}>
-              <Feather name={secure ? 'eye':'eye-off'} size={20}  color="#666"/>
+          <TextInput placeholder='Password'  style={styles.passwordinput} secureTextEntry={secureForPassword} value={password} onChangeText={setPassword} />
+          <TouchableOpacity onPress={() => setSecureForPassword(!secureForPassword)} style={styles.icon}>
+              <Feather name={secureForPassword ? 'eye':'eye-off'} size={20}  color="#666"/>
 
           </TouchableOpacity>
           </View>
+
+         
           <View>
             
           </View>   
