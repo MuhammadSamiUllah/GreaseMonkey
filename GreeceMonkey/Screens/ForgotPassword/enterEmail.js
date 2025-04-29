@@ -7,7 +7,10 @@ export default function enterEmail({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-           <AntDesign name='left' color={'#000000'} size={24}  />
+        <TouchableOpacity onPress={()=>navigation.navigate('SignIn')}>
+        <AntDesign name='left' color={'#000000'} size={24}  />
+
+        </TouchableOpacity>
            <Text style={{fontSize:29,fontWeight:'500',top:-8}}>Forgot Password</Text>
      
          </View>

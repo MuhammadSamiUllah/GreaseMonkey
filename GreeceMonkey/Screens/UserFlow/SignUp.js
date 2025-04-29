@@ -15,7 +15,9 @@ const [countryFlag, setCountryFlag] = useState('🇵🇰');
 return (
   <View style={styles.Container}>
     <View style={styles.header}>
+      <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
       <AntDesign name='left' color={'#000000'} size={24}  />
+      </TouchableOpacity>
       <Text style={{fontSize:29,fontWeight:'500',top:-8}}>Let's get started</Text>
 
     </View>
